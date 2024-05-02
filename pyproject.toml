@@ -16,8 +16,9 @@ limited-api = true
 [tool.cibuildwheel]
 skip = [
     # Only build 64-built wheels on Windows
-    "*win32*"
+    "*win32*",
     # Skip PyPy builds; PyPy doesn't support abi3 tags
+    "pp*",
 ]
 test-extras = ["test"]
 test-command = ["pytest {project}/test_example.py"]
