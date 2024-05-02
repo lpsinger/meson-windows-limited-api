@@ -1,0 +1,18 @@
+[project]
+name = "example"
+requires-python = ">=3.9"
+version = "0.0.1"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+build-backend = 'mesonpy'
+requires = ["meson-python"]
+
+[tool.meson-python]
+limited-api = true
+
+[tool.cibuildwheel]
+test-extras = ["test"]
+test-command = ["pytest {project}/test_example.py"]
