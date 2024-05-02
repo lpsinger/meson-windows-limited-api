@@ -12,7 +12,7 @@ static PyMethodDef methods[] = {
 static PyModuleDef moduledef = {
     .m_base = PyModuleDef_HEAD_INIT,
     .m_name = "example",
-    .m_methods = &methods
+    .m_methods = methods
 };
 
 PyMODINIT_FUNC PyInit_example(void)
