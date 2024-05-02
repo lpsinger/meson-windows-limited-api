@@ -17,6 +17,7 @@ limited-api = true
 skip = [
     # Only build 64-built wheels on Windows
     "*win32*"
+    # Skip PyPy builds; PyPy doesn't support abi3 tags
 ]
 test-extras = ["test"]
 test-command = ["pytest {project}/test_example.py"]
