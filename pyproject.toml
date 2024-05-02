@@ -14,5 +14,9 @@ requires = ["meson-python"]
 limited-api = true
 
 [tool.cibuildwheel]
+skip = [
+    # Only build 64-built wheels on Windows
+    "*win32*"
+]
 test-extras = ["test"]
 test-command = ["pytest {project}/test_example.py"]
